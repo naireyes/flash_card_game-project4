@@ -1,21 +1,27 @@
 body {
     width: 100vw;
     height: 100vh;
+    background-color: #4F8A8B;
+    position: relative;
+}
+
+.startBox {
+    width: 25%;
+    height: 15%;
+    border: 5px;
+    border-color: gray;
+    background-color: greenyellow;
+    text-align: center;
+    padding: 2px 0 15px 0;
+    position: absolute;
+    margin-left: 35%;
+    margin-top: 15%;
+    opacity: 0;
+
 }
 
 h1 {
     text-align: center;
-}
-
-.container {
-    display: grid;
-    grid-template-columns: 200px;
-    border: 2em;
-    border-color: black;
-    padding: 2px;
-    width: 42%;
-    height: 75%;
-    margin: 2% 0 0 30%;
 }
 
 .questions {
@@ -27,8 +33,8 @@ h1 {
     border: 5px solid gray;
     padding: 10px;
     height: 13em;
-    width: 75%;
-    margin-left: 13%;
+    width: 65%;
+    margin-left: 15%;
     margin-top: 1em;
 
 
@@ -39,26 +45,21 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(225, 238, 245);
+    background-color: rgb(200, 223, 200);
     border: 5px solid gray;
     padding: 10px;
     height: 25em;
-    width: 75%;
-    margin-left: 13%;
+    width: 65%;
+    margin-left: 15%;
     margin-top: 1em;
 }
 
 .answer {
-    border: 2px;
-    border-color: gray;
-    height: 5em;
-    width: 65em;
-    background-color: white;
     border: 1px;
     border-color: black;
+    height: 5em;
+    width: 55em;
+    background-color: white;
     margin: 1em;
-
-
-
-
+    border-radius: 15%;
 }
