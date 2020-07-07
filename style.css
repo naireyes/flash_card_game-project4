@@ -6,3 +6,59 @@ body {
 h1 {
     text-align: center;
 }
+
+.container {
+    display: grid;
+    grid-template-columns: 200px;
+    border: 2em;
+    border-color: black;
+    padding: 2px;
+    width: 42%;
+    height: 75%;
+    margin: 2% 0 0 30%;
+}
+
+.questions {
+    display: inline-flexbox;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 5px solid gray;
+    padding: 10px;
+    height: 13em;
+    width: 75%;
+    margin-left: 13%;
+    margin-top: 1em;
+
+
+}
+
+.answers {
+    display: inline-flexbox;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(225, 238, 245);
+    border: 5px solid gray;
+    padding: 10px;
+    height: 25em;
+    width: 75%;
+    margin-left: 13%;
+    margin-top: 1em;
+}
+
+.answer {
+    border: 2px;
+    border-color: gray;
+    height: 5em;
+    width: 65em;
+    background-color: white;
+    border: 1px;
+    border-color: black;
+    margin: 1em;
+
+
+
+
+}
