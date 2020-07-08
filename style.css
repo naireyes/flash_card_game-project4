@@ -32,7 +32,7 @@ h1 {
     background-color: white;
     border: 5px solid gray;
     padding: 10px;
-    height: 13em;
+    height: 10em;
     width: 65%;
     margin-left: 15%;
     margin-top: 1em;
@@ -40,26 +40,21 @@ h1 {
 
 }
 
-.answers {
+.choices {
     display: inline-flexbox;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(200, 223, 200);
+    background-color: white;
     border: 5px solid gray;
     padding: 10px;
-    height: 25em;
+    height: 17em;
     width: 65%;
     margin-left: 15%;
     margin-top: 1em;
 }
 
-.answer {
-    border: 1px;
-    border-color: black;
-    height: 5em;
-    width: 55em;
-    background-color: white;
-    margin: 1em;
-    border-radius: 15%;
+form {
+    text-align: center;
+    margin: 20px 0;
 }
