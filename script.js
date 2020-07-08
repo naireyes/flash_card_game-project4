@@ -1,11 +1,10 @@
-const question = document.querySelector(".questions");
+const start = document.querySelector('.start');
+const newGame = document.querySelector('.newGame');
+const qNA = document.querySelector(".questions");
 const choiceA = document.querySelector(".a");
 const choiceB = document.querySelector(".b");
 const choiceC = document.querySelector(".c");
 const choiceD = document.querySelector(".d");
-const start = document.querySelector('.start');
-const newGame = document.querySelector('.newGame');
-
 
 let qNA = [{
         question: "What is the name for the Jewish New Year?",
@@ -32,33 +31,52 @@ let qNA = [{
         correctAnswer: "c"
     }
 ];
-console.log(qNA[0]);
 
+const questionIndex = question.length - 1;
+let currentQuestion = 0;
+let score = 0;
 
-// function start() {
-//     //addEventlistener to start button
-//     let startButton = document.querySelector('.start');
-//     startButton.addEventListener('click', Questions.startQuestions())
-// }
+function startQuestion() {
+    let quest = questions[currentQuestion];
 
+    question.innerHTML = "<p>" + quest.question + "</p>";
+    choiceA.innerHTML = quest.choiceA;
+    choiceB.innerHTML = quest.choiceB;
+    choiceC.innerHTML = quest.choiceC;
+    choiceD.innerHTML = quest.choiceD;
 
+}
 
-// function reset() {
-//     //This will run the start function
-// };
+start.addEventListener('click', startTrivia)
 
-// function questions() {
-//     //When start button is pressed start with question 1
-//     this.questions;
+function startTrivia() {
+    startBox.opacity = 0;
+    startQuestion();
+    trivia.opacity = 1;
+}
 
-// };
+function checkAnswer() {
+    if (answer == qNA[startQuestion].correctAnswer) {
+        score++;
+        youGotIt();
+    } else {
+        youAintGotIt();
+    }
+    count = 0;
+    if (currentQuestion < questionIndex) {
+        currentQuestion++;
+        startQuestion();
+    } else {
+        addScore();
+    }
+}
 
-// function answer() {
-//     //get input from user for answer, if answer is not correctAnswer, run wrong answer function, 
-//     // if correct answer is guessed, go to the next question
+function youGotIt() {
+    let snd = new Audio("applause7.wav");
+    snd.play();
+}
 
-
-// };
-
-// function wrongAnswer() {}
-// //this will turn on sound 
+function youAintGotIt() {
+    let snd2 = new Audio("Cough+5.wav")
+    snd2.play()
+}
