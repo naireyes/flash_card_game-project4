@@ -17,6 +17,7 @@ body {
     margin-left: 35%;
     margin-top: 15%;
     opacity: 1;
+    z-index: 1;
 
 }
 
@@ -81,5 +82,5 @@ p {
 }
 
 #container {
-    opacity: 1;
+    opacity: 0;
 }

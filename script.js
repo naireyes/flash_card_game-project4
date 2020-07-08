@@ -45,7 +45,7 @@ function startTrivia(e) {
 
 const questionIndex = questions.length - 1;
 let currentQuestion = 0;
-let score = 0;
+
 
 function startQuestion() {
     let quest = questions[currentQuestion];
@@ -75,7 +75,7 @@ function checkAnswer(answer) {
 }
 
 function youGotIt() {
-    document.querySelector(currentQuestion).style.background = green;
+    document.querySelector(currentQuestion).style.background = 'green';
     let snd = new Audio("applause7.wav");
     snd.play();
 }
@@ -86,6 +86,13 @@ function youAintGotIt() {
     snd2.play()
 }
 
-function addScore() {
+let score = 0;
 
+function scoreCounter() {
+    scoreCount += 10;
+    score.innerHTML = scoreCount;
+    if (scoreCount == questions.length - 1) {
+        winner.style.opacity = 1;
+        document.querySelector(".level-arena").style.opacity = 0;
+    }
 }
