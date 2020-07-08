@@ -1,12 +1,15 @@
-const start = document.querySelector('.start');
-const newGame = document.querySelector('.newGame');
-const qNA = document.querySelector(".questions");
+const startButton = document.querySelector('.startButton'); //start
+const container = document.querySelector('#container'); //quiz
+const questionsDiv = document.querySelector(".questions"); //div class questions
 const choiceA = document.querySelector(".a");
 const choiceB = document.querySelector(".b");
 const choiceC = document.querySelector(".c");
 const choiceD = document.querySelector(".d");
+const startBox = document.querySelector('.startBox');
 
-let qNA = [{
+
+
+let questions = [{
         question: "What is the name for the Jewish New Year?",
         choiceA: "a.) Hannukah",
         choiceB: "b.) Yum Kippur",
@@ -32,14 +35,22 @@ let qNA = [{
     }
 ];
 
-const questionIndex = question.length - 1;
+startButton.addEventListener('click', startTrivia)
+
+function startTrivia(e) {
+    startBox.style.opacity = 0;
+    container.style.opacity = 1;
+    startQuestion();
+}
+
+const questionIndex = questions.length - 1;
 let currentQuestion = 0;
 let score = 0;
 
 function startQuestion() {
     let quest = questions[currentQuestion];
 
-    question.innerHTML = "<p>" + quest.question + "</p>";
+    questionsDiv.innerHTML = "<p>" + quest.question + "</p>";
     choiceA.innerHTML = quest.choiceA;
     choiceB.innerHTML = quest.choiceB;
     choiceC.innerHTML = quest.choiceC;
@@ -47,16 +58,8 @@ function startQuestion() {
 
 }
 
-start.addEventListener('click', startTrivia)
-
-function startTrivia() {
-    startBox.opacity = 0;
-    startQuestion();
-    trivia.opacity = 1;
-}
-
-function checkAnswer() {
-    if (answer == qNA[startQuestion].correctAnswer) {
+function checkAnswer(answer) {
+    if (answer == questions[currentQuestion].correctAnswer) {
         score++;
         youGotIt();
     } else {
@@ -72,11 +75,17 @@ function checkAnswer() {
 }
 
 function youGotIt() {
+    document.querySelector(currentQuestion).style.background = green;
     let snd = new Audio("applause7.wav");
     snd.play();
 }
 
 function youAintGotIt() {
+    document.querySelector(currentQuestion).style.background = "red";
     let snd2 = new Audio("Cough+5.wav")
     snd2.play()
+}
+
+function addScore() {
+
 }
