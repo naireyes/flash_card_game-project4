@@ -87,6 +87,14 @@ let questions = [{
         choiceC: "c.) The Black Typhoon",
         choiceD: "d.) The Slytherin",
         correctAnswer: "B"
+    },
+    {
+        questions: "According to Forrest Gump, 'life was like...",
+        choiceA: "a.) A bag of Lemons",
+        choiceB: "b.) A handful of roses",
+        choiceC: "c.) A lollipop",
+        choiceD: "d.) A box of chocolate",
+        correctAnswer: "D"
     }
 
 ];
@@ -147,8 +155,9 @@ let score = 0;
 
 function showScore() {
     document.querySelector('.yourScore').style.opacity = 1;
-    document.querySelector('container').style.opacity = 0;
-    document.querySelector('.finScore').textContent = " / " + questions;
+    document.querySelector('.container').style.opacity = 0;
+    document.querySelector('.finScore').innerHTML = " / " + questions;
+
 
 }
 
