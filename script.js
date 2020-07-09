@@ -1,5 +1,5 @@
 const startButton = document.querySelector('.startButton'); //start
-const container = document.querySelector('#container'); //quiz
+const container = document.querySelector('#container'); //trivia window
 const questionsDiv = document.querySelector(".questions"); //div class questions
 const choiceA = document.querySelector(".a");
 const choiceB = document.querySelector(".b");
@@ -12,26 +12,51 @@ let questions = [{
         question: "What is the name for the Jewish New Year?",
         choiceA: "a.) Hannukah",
         choiceB: "b.) Yum Kippur",
-        ChoiceC: "c.) Kwanza",
-        ChoiceD: "d.) Rosh Hashanah",
-        correctAnswer: "d"
+        choiceC: "c.) Kwanza",
+        choiceD: "d.) Rosh Hashanah",
+        correctAnswer: "D"
     },
     {
         question: "What was the name of the band Lionel Richie was part of?",
-        ChoiceA: "a.) King Harvest",
-        ChoiceB: "b.) Spectrums",
-        ChoiceC: "c.) Commodores",
-        ChoiceD: "d.) The Marshall Tucker Band",
-        correctAnswer: "c"
+        choiceA: "a.) King Harvest",
+        choiceB: "b.) Spectrums",
+        choiceC: "c.) Commodores",
+        choiceD: "d.) The Marshall Tucker Band",
+        correctAnswer: "C"
     },
     {
         question: "Which one of these characters is not friends with Harry Potter?",
-        ChoiceA: "Ron Weasley",
-        ChoiceB: "Neville Longbottom",
-        ChoiceC: "Draco Malfoy",
-        ChoiceD: "Hermione Granger",
-        correctAnswer: "c"
+        choiceA: "a.) Ron Weasley",
+        choiceB: "b.) Neville Longbottom",
+        choiceC: "c.) Draco Malfoy",
+        choiceD: "d.) Hermione Granger",
+        correctAnswer: "C"
+    },
+    {
+        question: "What color is Donald Duck's bowtie?",
+        choiceA: "a.) Red",
+        choiceB: "b.)Yellow",
+        choiceC: "c.)Blue",
+        choiceD: "d.)White",
+        correctAnswer: "A"
+    },
+    {
+        question: "Which does not appear in the Chinese zodiac?",
+        choiceA: "a.) Dragon",
+        choiceB: "b.) Rabbit",
+        choiceC: "c.)Dog",
+        choiceD: "d.)Hummingbird",
+        correctAnswer: "D"
+    },
+    {
+        question: "Which country held the 2016 Summer Olympics",
+        choiceA: "a.) China",
+        choiceB: "b.) Ireland",
+        choiceC: "c.) Brazil",
+        choiceD: "d.) Italy",
+        correctAnswer: "C"
     }
+
 ];
 
 startButton.addEventListener('click', startTrivia)
@@ -66,7 +91,6 @@ function checkAnswer(answer) {
     }
 
     if (currentQuestion < questionIndex) {
-        // count = 0;
         currentQuestion++;
         startQuestion();
     } else {
@@ -75,13 +99,11 @@ function checkAnswer(answer) {
 }
 
 function youGotIt() {
-    document.querySelector(currentQuestion).style.background = 'green';
     let snd = new Audio("applause7.wav");
     snd.play();
 }
 
 function youAintGotIt() {
-    document.querySelector(currentQuestion).style.background = "red";
     let snd2 = new Audio("Cough+5.wav")
     snd2.play()
 }
@@ -89,12 +111,11 @@ function youAintGotIt() {
 let score = 0;
 
 function showScore() {
-    scoreCount += 10;
-    score.innerHTML = scoreCount;
-    if (scoreCount == questions.length - 1) {
-        winner.style.opacity = 1;
-        document.querySelector(".level-arena").style.opacity = 0;
-        let snd = new Audio("applause7.wav");
-        snd.play();
-    }
+    scoreCount.innerHTML = scoreCount + "/" + questionsIndex;
+    // if (scoreCount == questions.length - 1) {
+    //     winner.style.opacity = 1;
+    //     document.querySelector(".level-arena").style.opacity = 0;
+    //     let snd = new Audio("applause7.wav");
+    //     snd.play();
+    // }
 }
