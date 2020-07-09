@@ -111,7 +111,7 @@ function startQuestion() {
     choiceB.innerHTML = quest.choiceB;
     choiceC.innerHTML = quest.choiceC;
     choiceD.innerHTML = quest.choiceD;
-    scoreCount.innerHTML = " / " + questions.length;
+    scoreCount.innerHTML = ' / ' + questions.length;
 
 }
 
@@ -132,10 +132,11 @@ function checkAnswer(answer) {
 }
 
 function youGotIt() {
-    score++;
+
     let snd = new Audio("applause7.wav");
     snd.play();
 }
+count = 0;
 
 function youAintGotIt() {
     let snd2 = new Audio("Error-sound.mp3")
@@ -145,9 +146,17 @@ function youAintGotIt() {
 let score = 0;
 
 function showScore() {
-    document.querySelector('.finScore').innerHTML = score + "/" + questionIndex;
+    document.querySelector('.yourScore').style.opacity = 1;
+    document.querySelector('container').style.opacity = 0;
+    document.querySelector('.finScore').textContent = " / " + questions;
+
 }
 
-function runningScore() {
-    scoreCount.innerHTML = questionIndex;
+function runningScore(score) {
+    if (answer == questions[currentQuestion].correctAnswer) {
+        score += 10;
+        scoreCount.innerHTML = score + '/' + question.length;
+
+    }
+
 }
