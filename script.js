@@ -7,6 +7,8 @@ const choiceC = document.querySelector(".c");
 const choiceD = document.querySelector(".d");
 const startBox = document.querySelector('.startBox');
 const scoreCount = document.querySelector('.scoreCount');
+const resetButton = document.querySelector('.reset');
+const finScore = document.querySelector('.finScore');
 
 let questions = [{
         question: "What is the name for the Jewish New Year?",
@@ -89,7 +91,7 @@ let questions = [{
         correctAnswer: "B"
     },
     {
-        questions: "According to Forrest Gump, 'life was like...",
+        question: "According to Forrest Gump, 'life was like...",
         choiceA: "a.) A bag of Lemons",
         choiceB: "b.) A handful of roses",
         choiceC: "c.) A lollipop",
@@ -119,9 +121,12 @@ function startQuestion() {
     choiceB.innerHTML = quest.choiceB;
     choiceC.innerHTML = quest.choiceC;
     choiceD.innerHTML = quest.choiceD;
-    scoreCount.innerHTML = ' / ' + questions.length;
+    scoreCount.innerHTML = score + ' / ' + questions.length;
 
 }
+
+let scoreText;
+let score = 0;
 
 function checkAnswer(answer) {
     if (answer == questions[currentQuestion].correctAnswer) {
@@ -136,6 +141,7 @@ function checkAnswer(answer) {
         startQuestion();
     } else {
         showScore();
+
     }
 }
 
@@ -151,21 +157,18 @@ function youAintGotIt() {
     snd2.play()
 }
 
-let score = 0;
-
 function showScore() {
     document.querySelector('.yourScore').style.opacity = 1;
-    document.querySelector('.container').style.opacity = 0;
-    document.querySelector('.finScore').innerHTML = " / " + questions;
-
+    finScore.innerHTML = "<p>" + " / " + questions.length + "<p>";
+    // document.location.href = "";
 
 }
+
 
 function runningScore(score) {
     if (answer == questions[currentQuestion].correctAnswer) {
         score += 10;
-        scoreCount.innerHTML = score + '/' + question.length;
-
+        score.innerHTML = score;
     }
 
 }

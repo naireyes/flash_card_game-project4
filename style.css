@@ -20,7 +20,7 @@ body {
     opacity: 1;
     z-index: 2;
     background-color: rgb(139, 241, 245);
-    color: white;
+    color: black;
     animation: myMove 3s infinite;
 }
 
@@ -42,6 +42,10 @@ h1 {
     margin-top: 2em;
     text-align: center;
     font-size: 2em;
+}
+
+h2 {
+    font-size: 3em;
 }
 
 .questions {
@@ -145,7 +149,7 @@ video {
     padding: 4rem;
     background-color: #111;
     text-align: center;
-    z-index: 10;
+    z-index: 7;
     opacity: 0;
     pointer-events: none;
     transition: all 250ms ease;
@@ -158,4 +162,12 @@ video {
 
 .finScore {
     font-size: 3em;
+}
+
+.reset {
+    margin-top: 2em;
+    width: 11em;
+    height: 3em;
+    font-size: 2em;
+    /* z-index: 7; */
 }
