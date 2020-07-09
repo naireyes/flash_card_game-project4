@@ -1,6 +1,6 @@
-const startButton = document.querySelector('.startButton'); //start
-const container = document.querySelector('#container'); //trivia window
-const questionsDiv = document.querySelector(".questions"); //div class questions
+const startButton = document.querySelector('.startButton');
+const container = document.querySelector('#container');
+const questionsDiv = document.querySelector(".questions");
 const choiceA = document.querySelector(".a");
 const choiceB = document.querySelector(".b");
 const choiceC = document.querySelector(".c");
@@ -55,6 +55,38 @@ let questions = [{
         choiceC: "c.) Brazil",
         choiceD: "d.) Italy",
         correctAnswer: "C"
+    },
+    {
+        question: "Which planet is the hottest?",
+        choiceA: "a.) Venus",
+        choiceB: "b.) Saturn",
+        choiceC: "c.) Mercury",
+        choiceD: "d.) Mars",
+        correctAnswer: "C"
+    },
+    {
+        question: "Who is the only President to resign?",
+        choiceA: "a.) Herbert Hoover",
+        choiceB: "b.) Richard Nixon",
+        choiceC: "c.) George W. Bush",
+        choiceD: "d.) Barrack Obama",
+        correctAnswer: "B"
+    },
+    {
+        question: "What does the 'D' in the 'D-Day' stand for?",
+        choiceA: "a.) Dooms",
+        choiceB: "b.) Dark",
+        choiceC: "c.) Denmark",
+        choiceD: "d.) Dunkirk",
+        correctAnswer: "A"
+    },
+    {
+        question: "In Pirates of the Caribbean, what is the name of Captain Jack Sparrow's ship?",
+        choiceA: "a.) The Marauder",
+        choiceB: "b.) The Black Pearl",
+        choiceC: "c.) The Black Typhoon",
+        choiceD: "d.) The Slytherin",
+        correctAnswer: "B"
     }
 
 ];
@@ -111,11 +143,9 @@ function youAintGotIt() {
 let score = 0;
 
 function showScore() {
-    scoreCount.innerHTML = scoreCount + "/" + questionsIndex;
-    // if (scoreCount == questions.length - 1) {
-    //     winner.style.opacity = 1;
-    //     document.querySelector(".level-arena").style.opacity = 0;
-    //     let snd = new Audio("applause7.wav");
-    //     snd.play();
-    // }
+    document.querySelector('.finScore').innerHTML = score + "/" + questionIndex;
+}
+
+function runningScore() {
+    scoreCount.innerHTML = questionIndex;
 }
