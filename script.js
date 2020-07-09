@@ -6,7 +6,7 @@ const choiceB = document.querySelector(".b");
 const choiceC = document.querySelector(".c");
 const choiceD = document.querySelector(".d");
 const startBox = document.querySelector('.startBox');
-const winner = document.querySelector('.winner');
+const scoreCount = document.querySelector('.scoreCount');
 
 let questions = [{
         question: "What is the name for the Jewish New Year?",
@@ -111,6 +111,7 @@ function startQuestion() {
     choiceB.innerHTML = quest.choiceB;
     choiceC.innerHTML = quest.choiceC;
     choiceD.innerHTML = quest.choiceD;
+    scoreCount.innerHTML = " / " + questions.length;
 
 }
 
@@ -131,12 +132,13 @@ function checkAnswer(answer) {
 }
 
 function youGotIt() {
+    score++;
     let snd = new Audio("applause7.wav");
     snd.play();
 }
 
 function youAintGotIt() {
-    let snd2 = new Audio("Cough+5.wav")
+    let snd2 = new Audio("Error-sound.mp3")
     snd2.play()
 }
 
