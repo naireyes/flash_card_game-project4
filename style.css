@@ -10,14 +10,15 @@ body {
     height: 15%;
     border: 5px;
     border-color: gray;
-    background-color: greenyellow;
+    background-color: rgb(68, 130, 167);
     text-align: center;
     padding: 2px 0 15px 0;
     position: absolute;
     margin-left: 35%;
     margin-top: 15%;
     opacity: 1;
-    z-index: 1;
+    z-index: 2;
+
 
 }
 
@@ -83,4 +84,17 @@ p {
 
 #container {
     opacity: 0;
+    z-index: 1;
+    position: relative;
 }
+
+.winner {
+    opacity: 1;
+    z-index: 3;
+    font-size: 2em;
+    position: absolute;
+    background-color: rgb(25, 197, 25);
+
+}
+
+.showScore {}

@@ -6,8 +6,7 @@ const choiceB = document.querySelector(".b");
 const choiceC = document.querySelector(".c");
 const choiceD = document.querySelector(".d");
 const startBox = document.querySelector('.startBox');
-
-
+const winner = document.querySelector('.winner');
 
 let questions = [{
         question: "What is the name for the Jewish New Year?",
@@ -65,12 +64,13 @@ function checkAnswer(answer) {
     } else {
         youAintGotIt();
     }
-    count = 0;
+
     if (currentQuestion < questionIndex) {
+        // count = 0;
         currentQuestion++;
         startQuestion();
     } else {
-        addScore();
+        showScore();
     }
 }
 
@@ -88,11 +88,13 @@ function youAintGotIt() {
 
 let score = 0;
 
-function scoreCounter() {
+function showScore() {
     scoreCount += 10;
     score.innerHTML = scoreCount;
     if (scoreCount == questions.length - 1) {
         winner.style.opacity = 1;
         document.querySelector(".level-arena").style.opacity = 0;
+        let snd = new Audio("applause7.wav");
+        snd.play();
     }
 }
