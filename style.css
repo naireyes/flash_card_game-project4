@@ -2,31 +2,42 @@ body {
     width: 100vw;
     height: 100vh;
     position: relative;
-    font-family: 'Merriweather', serif;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(219, 219, 100);
 
 
 }
 
+/* #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -2;
+} */
+
 .startBox {
     width: 45%;
-    height: 25%;
+    height: 45%;
     border: 5px;
     border-color: gray;
     text-align: center;
     padding: 2px 0 15px 0;
     position: absolute;
-    margin-left: 35%;
-    margin-top: 15%;
+    margin-left: 25%;
+    margin-top: 5%;
     opacity: 1;
-    z-index: 2;
+    z-index: 20;
     background-color: rgb(139, 241, 245);
     color: black;
     animation: myMove 3s infinite;
+    font-family: 'Bungee Shade', cursive;
 }
 
 @keyframes myMove {
     50% {
-        box-shadow: 10px 20px 30px blue;
+        box-shadow: 25px 35px 45px rgb(39, 53, 131);
     }
 }
 
@@ -35,13 +46,15 @@ body {
     width: 8em;
     box-shadow: 10px 5px 5px lightgray;
     border-radius: 12%;
+    font-size: 25px;
+    border-color: lightgray;
 }
 
 
 h1 {
-    margin-top: 2em;
     text-align: center;
-    font-size: 2em;
+    font-size: 45px;
+    font-family: 'Bungee Shade', cursive;
 }
 
 h2 {
@@ -53,13 +66,13 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: rgb(159, 159, 235);
     border: 5px solid gray;
     padding: 10px;
-    height: 10em;
+    height: 9em;
     width: 65%;
     margin-left: 15%;
-    /* margin-top: 1em; */
+
 
 }
 
@@ -68,10 +81,10 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: rgb(159, 159, 235);
     border: 5px solid gray;
     padding: 10px;
-    height: 26em;
+    height: 23em;
     width: 65%;
     margin-left: 15%;
     margin-top: 1em;
@@ -99,7 +112,7 @@ form {
 
 p {
     margin-left: 6%;
-    font-size: 20px;
+    font-size: 30px;
 
 }
 
@@ -116,15 +129,6 @@ video {
     position: absolute;
 }
 
-/* .winner {
-    opacity: 1;
-    z-index: 3;
-    font-size: 2em;
-    position: absolute;
-    background-color: rgb(25, 197, 25);
-
-} */
-
 .scoreCount {
     display: inline-flexbox;
     flex-direction: column;
@@ -136,14 +140,15 @@ video {
     height: 2em;
     width: 15%;
     margin-left: 40%;
-    margin-top: 2em;
+    margin-top: 1em;
     text-align: center;
+    font-size: 25px;
 
 }
 
 .yourScore {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 4rem;
@@ -160,14 +165,14 @@ video {
 
 }
 
-.finScore {
-    font-size: 3em;
+.finScoreH1 {
+    margin-top: 20%;
 }
 
-.reset {
+/* .reset {
     margin-top: 2em;
     width: 11em;
     height: 3em;
     font-size: 2em;
-    /* z-index: 7; */
-}
+    z-index: 30;
+} */

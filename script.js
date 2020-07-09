@@ -159,11 +159,13 @@ function youAintGotIt() {
 
 function showScore() {
     document.querySelector('.yourScore').style.opacity = 1;
-    finScore.innerHTML = "<p>" + " / " + questions.length + "<p>";
-    // document.location.href = "";
+    setTimeout(reset, 4000);
 
 }
 
+function reset() {
+    document.location.href = "";
+}
 
 function runningScore(score) {
     if (answer == questions[currentQuestion].correctAnswer) {
