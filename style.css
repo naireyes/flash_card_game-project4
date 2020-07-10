@@ -7,22 +7,6 @@ body {
 
 }
 
-.layer {
-    background-image: linear-gradient(to right, #06103a, rgba(255, 0, 0, 0));
-    position: absolute;
-    height: 637px;
-    width: 90rem;
-}
-
-/* #myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -2;
-} */
-
 .startBox {
     width: 45%;
     height: 45%;
@@ -78,7 +62,6 @@ h2 {
     height: 7em;
     width: 65%;
     margin-left: 15%;
-
 
 }
 
@@ -175,10 +158,21 @@ video {
     margin-top: 20%;
 }
 
-/* .reset {
-    margin-top: 2em;
-    width: 11em;
-    height: 3em;
-    font-size: 2em;
-    z-index: 30;
-} */
+@media only screen and (min-device-width : 375px) and (max-device-width : 812px) and (-webkit-device-pixel-ratio : 3) and (orientation : portrait) {
+
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 5px;
+    }
+
+    startButton {
+        height: 5px;
+        width: 10px;
+    }
+
+
+
+}
