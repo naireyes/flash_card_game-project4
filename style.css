@@ -5,7 +5,13 @@ body {
     font-family: 'Open Sans', sans-serif;
     background-color: rgb(219, 219, 100);
 
+}
 
+.layer {
+    background-image: linear-gradient(to right, #06103a, rgba(255, 0, 0, 0));
+    position: absolute;
+    height: 637px;
+    width: 90rem;
 }
 
 /* #myVideo {
@@ -69,7 +75,7 @@ h2 {
     background-color: rgb(159, 159, 235);
     border: 5px solid gray;
     padding: 10px;
-    height: 9em;
+    height: 7em;
     width: 65%;
     margin-left: 15%;
 
