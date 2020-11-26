@@ -176,3 +176,84 @@ video {
 
 
 }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+
+    .startBox {
+        width: 80%;
+        margin: 25% 8%;
+        height: 15rem;
+    }
+
+    .startBox h2 {
+        font-size: 2rem;
+    }
+
+    .startBox button {
+        height: 3.5rem;
+    }
+
+    #container h1 {
+        font-size: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .choices {
+        height: 25%;
+    }
+
+    .choice {
+        margin: 0 auto;
+    }
+
+    .questions p {
+        font-size: 1.1rem;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .scoreCount {
+        font-size: 1rem;
+    }
+
+    .finScoreH1 {
+        margin: 50% auto;
+    }
+
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+
+    .startBox {
+        width: 80%;
+        margin: 15% 8%;
+        height: 25rem;
+    }
+
+    #container h1 {
+        padding: 3rem 0 4rem 0;
+    }
+
+    .questions p {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        ;
+    }
+
+    .choices {
+        height: 25%;
+    }
+
+    .choice {
+        margin: 0 auto;
+    }
+
+    .finScoreH1 {
+        margin: 50% auto;
+        font-size: 3rem;
+    }
+
+}
